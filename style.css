@@ -1,4 +1,3 @@
-/* Importando a fonte pedida no desafio */
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
 
 * {
@@ -8,29 +7,32 @@
 }
 
 body {
-    background-color: #edf2f8; /* Azul claro do design, não branco */
-    font-family: 'Barlow Semi Condensed', sans-serif; /* Aplicando a fonte correta */
+    background-color: #ecf2f8; 
+    font-family: 'Barlow Semi Condensed', sans-serif;
     padding: 20px;
     
-    /* Centralizando tudo no meio da tela */
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh; 
+    
+   
+    font-size: 13px; 
 }
 
 .principal-grid {
     display: grid;
-    gap: 30px; /* Aumentei um pouco o gap para respirar mais */
-    max-width: 1110px; /* Trava a largura máxima para monitores grandes */
-    width: 100%;
+    gap: 30px; 
+    max-width: 1110px; 
+    width: 100%; 
 }
 
 .card {
-    padding: 32px;
+    padding: 32px; 
     border-radius: 8px;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05); /* Sombra levinha nos cards */
+    box-shadow: 15px 15px 30px rgba(72, 85, 106, 0.15); 
 }
 
 .apresentacao {
@@ -46,7 +48,7 @@ body {
     margin-right: 15px;
 }
 
-/* Ajustes de tamanho de fonte e cores nos textos */
+
 .nome-atua h2 {
     font-size: 14px;
     font-weight: 500;
@@ -54,7 +56,7 @@ body {
 
 .nome-atua p {
     font-size: 11px;
-    opacity: 0.5; /* Deixa o "Verified Graduate" apagadinho */
+    opacity: 0.5; 
 }
 
 .card h3 {
@@ -65,23 +67,21 @@ body {
     position: relative;
 }
 
-/* O " > p " seleciona apenas o parágrafo de depoimento por fora da apresentacao */
 .card > p {
     font-size: 13px;
     line-height: 1.4;
-    opacity: 0.7; /* Deixa o texto do depoimento um pouco transparente */
+    opacity: 0.7; 
 }
 
-/* --- CORES DOS CARDS --- */
+
 .daniel {
     background-color: #733fc8;
     color: white;
-    /* Imagem das aspas no fundo do card do daniel */
     background-image: url('./images/bg-pattern-quotation.svg');
     background-repeat: no-repeat;
     background-position: top right 18%;
 }
-.daniel .foto { border: 2px solid #a775fa; } /* Bordinha na foto */
+.daniel .foto { border: 2px solid #a775fa; } 
 
 .jonathan {
     background-color: #49556b;
@@ -90,21 +90,20 @@ body {
 
 .jeanette {
     background-color: #ffffff;
-    color: #49556b; /* Texto escuro no fundo branco */
+    color: #49556b; 
 }
 
 .patrick {
     background-color: #191f2d;
     color: white;
 }
-.patrick .foto { border: 2px solid #733fc8; } /* Bordinha na foto */
+.patrick .foto { border: 2px solid #733fc8; }
 
 .kira {
     background-color: #ffffff;
-    color: #49556b; /* Texto escuro no fundo branco */
+    color: #49556b;
 }
 
-/* --- AJUSTE DO RODAPÉ --- */
 .attribution {
     text-align: center;
     font-size: 12px;
@@ -112,11 +111,9 @@ body {
 }
 
 
-/* --- VERSÃO PARA TELA DE COMPUTADOR --- */
 @media (min-width: 1000px) {
   
   .principal-grid { 
-    /* Aqui estava o erro! Agora está com o nome correto: principal-grid */
     grid-template-columns: 1fr 1fr 1fr 1fr; 
   }
   
@@ -145,7 +142,6 @@ body {
     grid-row: 2;
   }
 
-  /* Isso diz para o rodapé ocupar todas as colunas lá embaixo, sem quebrar o grid */
   .attribution {
     grid-column: 1 / -1;
   }
