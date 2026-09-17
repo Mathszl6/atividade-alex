@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.principal-grid{
+    display: grid;
+    gap: 20px;
+}
+
+.card{
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.apresentacao{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.foto{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+
+.card-daniel{
+    background-color: #733fc8;
+    color: white;
+}
+
+.card-jonathan{
+    background-color: #49556b;
+    color: white;
+}
+
+.card-jeanette{
+    background-color: #ffffff;
+    color: white;
+}
+
+.card-patrick{
+    background-color: #191f2d;
+    color: white;
+}
+
+.card-kira{
+    background-color: #ffffff;
+    color: white;
+}
