@@ -56,3 +56,31 @@ body {
     background-color: #ffffff;
     color: #19212e;
 }
+
+@media (min-width: 1000px) {
+  
+  .principal-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  .card-daniel {
+    grid-column-start: 1; 
+    grid-column-end: 3;  
+  }
+  .card-patrick {
+    grid-column-start: 1; 
+    grid-column-end: 3;   
+  }
+  .card-jonathan {
+    grid-column-start: 1; 
+    grid-column-end: 3;   
+  }
+  .card-jeanette {
+    grid-column-start: 1; 
+    grid-column-end: 3;   
+  }
+  .card-kira {
+    grid-column-start: 1; 
+    grid-column-end: 3;   
+  }
+}
