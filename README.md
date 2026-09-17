@@ -1,33 +1,39 @@
 # Frontend Mentor - Testimonials grid section solution
 
-Esta é a minha solução para o desafio [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). 
+This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). 
 
-## Visão Geral
+## Overview
 
-### O Desafio
-O objetivo deste projeto foi construir uma seção de depoimentos em formato de grid (malha) que se aproxima o máximo possível do design original. 
-Os usuários devem ser capazes de:
-- Visualizar o layout ideal para o site dependendo do tamanho da tela do dispositivo (Responsividade).
-- Ver os estados de _hover_ (passar o mouse) nos elementos interativos.
+### The challenge
+
+Users should be able to:
+- View the optimal layout for the site depending on their device's screen size.
+- See hover states for all interactive elements on the page.
 
 ### Links
-- URL do Repositório: [https://github.com/mathszl6/atividade-alex](https://github.com/mathszl6/atividade-alex)
 
-## Meu Processo
+- Repository URL: [https://github.com/mathszl6/atividade-alex](https://github.com/mathszl6/atividade-alex)
 
-### Tecnologias Utilizadas
-- HTML5 Semântico
-- CSS3 (Variáveis, Flexbox e CSS Grid Layout)
-- Abordagem Mobile-first
-- Fontes do Google Fonts (Barlow Semi Condensed)
+## My process
 
-### O que eu aprendi
-Neste projeto, pude aprofundar meus conhecimentos sobre **CSS Grid**, especificamente no uso de `grid-column` e `grid-row` para posicionar elementos de forma assimétrica e criar layouts mais modernos sem depender de bibliotecas externas.
+### Built with
 
-Também consolidei a utilização de:
-- Propriedades de opacidade (`opacity`) para diferenciar hierarquia visual nos textos.
-- `background-image` para posicionar SVGs de decoração sem poluir o HTML.
+- Semantic HTML5 markup
+- CSS Custom Properties
+- Flexbox
+- CSS Grid Layout
+- Mobile-first workflow
+- [Google Fonts](https://fonts.google.com/) - Barlow Semi Condensed
 
-## Autor
+### What I learned
+
+In this project, I focused on solidifying my understanding of **CSS Grid**, specifically using `grid-column` and `grid-row` to position elements asymmetrically and create a modern layout without relying on external frameworks. 
+
+I also practiced using:
+- `opacity` to create visual hierarchy and contrast in typography.
+- `background-image` to precisely position decorative SVG elements within a container.
+
+## Author
+
 - GitHub - [@mathszl6](https://github.com/mathszl6)
 - Frontend Mentor - [@mathszl6](https://www.frontendmentor.io/profile/mathszl6)
