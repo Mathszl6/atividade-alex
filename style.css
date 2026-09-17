@@ -1,115 +1,123 @@
-/* Importando a fonte oficial do desafio */
+/* Importando a fonte pedida no desafio */
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: #edf2f8; /* Fundo azul clarinho exato do design */
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 13px;
-  /* Estas 4 linhas centralizam o grid perfeitamente no meio da tela */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 24px;
+    background-color: #edf2f8; /* Azul claro do design, não branco */
+    font-family: 'Barlow Semi Condensed', sans-serif; /* Aplicando a fonte correta */
+    padding: 20px;
+    
+    /* Centralizando tudo no meio da tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
 }
 
-.container-grid {
-  display: grid;
-  gap: 24px;
-  max-width: 1110px; /* Impede que o site estique infinitamente em monitores grandes */
-  width: 100%;
+.principal-grid {
+    display: grid;
+    gap: 30px; /* Aumentei um pouco o gap para respirar mais */
+    max-width: 1110px; /* Trava a largura máxima para monitores grandes */
+    width: 100%;
 }
 
 .card {
-  padding: 32px;
-  border-radius: 8px;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05); /* Sombra suave para destacar do fundo */
-  position: relative;
-  z-index: 1;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05); /* Sombra levinha nos cards */
 }
 
-.cabecalho {
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
+.apresentacao {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
 }
 
 .foto {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  margin-right: 15px;
-  border: 2px solid rgba(255, 255, 255, 0.5); /* Borda transparente ao redor da foto */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 15px;
 }
 
-.cabecalho h2 {
-  font-size: 14px;
-  font-weight: 500;
+/* Ajustes de tamanho de fonte e cores nos textos */
+.nome-atua h2 {
+    font-size: 14px;
+    font-weight: 500;
 }
 
-.cabecalho p {
-  font-size: 11px;
-  opacity: 0.5; /* O segredo para o texto "Verified Graduate" ficar apagadinho */
+.nome-atua p {
+    font-size: 11px;
+    opacity: 0.5; /* Deixa o "Verified Graduate" apagadinho */
 }
 
 .card h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 16px;
-  line-height: 1.2;
-  position: relative;
-  z-index: 2; /* Mantém o texto acima da imagem de aspas */
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    z-index: 2;
+    position: relative;
 }
 
-/* Seleciona o texto de depoimento dentro do card */
+/* O " > p " seleciona apenas o parágrafo de depoimento por fora da apresentacao */
 .card > p {
-  font-size: 13px;
-  opacity: 0.7; /* Texto um pouco transparente, igual ao design */
-  line-height: 1.5;
+    font-size: 13px;
+    line-height: 1.4;
+    opacity: 0.7; /* Deixa o texto do depoimento um pouco transparente */
 }
 
 /* --- CORES DOS CARDS --- */
-.card-roxo {
-  background-color: #733fc8;
-  color: white;
-  /* Adicionando a imagem das aspas no card do Daniel */
-  background-image: url('./images/bg-pattern-quotation.svg');
-  background-repeat: no-repeat;
-  background-position: top right 18%; 
+.daniel {
+    background-color: #733fc8;
+    color: white;
+    /* Imagem das aspas no fundo do card do daniel */
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top right 18%;
+}
+.daniel .foto { border: 2px solid #a775fa; } /* Bordinha na foto */
+
+.jonathan {
+    background-color: #49556b;
+    color: white;
 }
 
-.card-cinza {
-  background-color: #48556a;
-  color: white;
+.jeanette {
+    background-color: #ffffff;
+    color: #49556b; /* Texto escuro no fundo branco */
 }
 
-.card-branco {
-  background-color: white;
-  color: #48556a;
+.patrick {
+    background-color: #191f2d;
+    color: white;
 }
-.card-branco .foto {
-  border: none; /* Cards brancos não têm borda na foto */
+.patrick .foto { border: 2px solid #733fc8; } /* Bordinha na foto */
+
+.kira {
+    background-color: #ffffff;
+    color: #49556b; /* Texto escuro no fundo branco */
 }
 
-/* Certifique-se de que o card do Patrick tenha a classe "card-escuro" no HTML */
-.card-escuro {
-  background-color: #19212e;
-  color: white;
+/* --- AJUSTE DO RODAPÉ --- */
+.attribution {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
 }
-.card-escuro .foto {
-  border-color: #733fc8; /* O Patrick tem uma borda roxa na foto */
-}
+
 
 /* --- VERSÃO PARA TELA DE COMPUTADOR --- */
 @media (min-width: 1000px) {
-  .container-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+  .principal-grid { 
+    /* Aqui estava o erro! Agora está com o nome correto: principal-grid */
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
   }
   
   .daniel {
@@ -124,7 +132,7 @@ body {
 
   .kira {
     grid-column: 4 / 5;
-    grid-row: 1 / 3;
+    grid-row: 1 / 3; 
   }
 
   .jeanette {
@@ -135,5 +143,10 @@ body {
   .patrick {
     grid-column: 2 / 4;
     grid-row: 2;
+  }
+
+  /* Isso diz para o rodapé ocupar todas as colunas lá embaixo, sem quebrar o grid */
+  .attribution {
+    grid-column: 1 / -1;
   }
 }
