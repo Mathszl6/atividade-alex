@@ -1,86 +1,139 @@
+/* Importando a fonte oficial do desafio */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: aliceblue;
-    font-family: sans-serif;
-    padding: 20px;
+  background-color: #edf2f8; /* Fundo azul clarinho exato do design */
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  /* Estas 4 linhas centralizam o grid perfeitamente no meio da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
 }
 
-.principal-grid{
-    display: grid;
-    gap: 20px;
+.container-grid {
+  display: grid;
+  gap: 24px;
+  max-width: 1110px; /* Impede que o site estique infinitamente em monitores grandes */
+  width: 100%;
 }
 
-.card{
-    padding: 30px;
-    border-radius: 10px;
+.card {
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05); /* Sombra suave para destacar do fundo */
+  position: relative;
+  z-index: 1;
 }
 
-.apresentacao{
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+.cabecalho {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
-.foto{
-    width: 40px;
-    border-radius: 50%;
-    margin-right: 15px;
+.foto {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Borda transparente ao redor da foto */
 }
 
-
-.card-daniel{
-    background-color: #733fc8;
-    color: white;
+.cabecalho h2 {
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.card-jonathan{
-    background-color: #49556b;
-    color: white;
+.cabecalho p {
+  font-size: 11px;
+  opacity: 0.5; /* O segredo para o texto "Verified Graduate" ficar apagadinho */
 }
 
-.card-jeanette{
-    background-color: #ffffff;
-    color: #19212e;
+.card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2; /* Mantém o texto acima da imagem de aspas */
 }
 
-.card-patrick{
-    background-color: #191f2d;
-    color: white;
+/* Seleciona o texto de depoimento dentro do card */
+.card > p {
+  font-size: 13px;
+  opacity: 0.7; /* Texto um pouco transparente, igual ao design */
+  line-height: 1.5;
 }
 
-.card-kira{
-    background-color: #ffffff;
-    color: #19212e;
+/* --- CORES DOS CARDS --- */
+.card-roxo {
+  background-color: #733fc8;
+  color: white;
+  /* Adicionando a imagem das aspas no card do Daniel */
+  background-image: url('./images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position: top right 18%; 
 }
 
+.card-cinza {
+  background-color: #48556a;
+  color: white;
+}
+
+.card-branco {
+  background-color: white;
+  color: #48556a;
+}
+.card-branco .foto {
+  border: none; /* Cards brancos não têm borda na foto */
+}
+
+/* Certifique-se de que o card do Patrick tenha a classe "card-escuro" no HTML */
+.card-escuro {
+  background-color: #19212e;
+  color: white;
+}
+.card-escuro .foto {
+  border-color: #733fc8; /* O Patrick tem uma borda roxa na foto */
+}
+
+/* --- VERSÃO PARA TELA DE COMPUTADOR --- */
 @media (min-width: 1000px) {
-  
-  .principal-grid {
+  .container-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   
-  .card-daniel {
-    grid-column-start: 1; 
-    grid-column-end: 3;  
+  .daniel {
+    grid-column: 1 / 3;
+    grid-row: 1;
   }
-  /* .card-patrick {
-    grid-column-start: 1; 
-    grid-column-end: 3;   
+
+  .jonathan {
+    grid-column: 3 / 4;
+    grid-row: 1;
   }
-  .card-jonathan {
-    grid-column-start: 1; 
-    grid-column-end: 3;   
+
+  .kira {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
   }
-  .card-jeanette {
-    grid-column-start: 1; 
-    grid-column-end: 3;   
+
+  .jeanette {
+    grid-column: 1 / 2;
+    grid-row: 2;
   }
-  .card-kira {
-    grid-column-start: 1; 
-    grid-column-end: 3;   
-  } */
+
+  .patrick {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
 }
