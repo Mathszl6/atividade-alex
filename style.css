@@ -67,7 +67,7 @@ body {
     grid-column-start: 1; 
     grid-column-end: 3;  
   }
-  .card-patrick {
+  /* .card-patrick {
     grid-column-start: 1; 
     grid-column-end: 3;   
   }
@@ -82,5 +82,5 @@ body {
   .card-kira {
     grid-column-start: 1; 
     grid-column-end: 3;   
-  }
+  } */
 }
